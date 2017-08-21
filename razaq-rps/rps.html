@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+
+    <script>
+  // Initialize Firebase
+  
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC4xS8zEBBs4KcSjmbzDH_copgPiN0tcs0",
+    authDomain: "rockpaperscissors-c73a9.firebaseapp.com",
+    databaseURL: "https://rockpaperscissors-c73a9.firebaseio.com",
+    projectId: "rockpaperscissors-c73a9",
+    storageBucket: "rockpaperscissors-c73a9.appspot.com",
+    messagingSenderId: "866130570593"
+  };
+  
+</script>
+  firebase.initializeApp(config);
+</script>
+    <script>
+ var choiceArray = ["Rock", "Scissors", "Paper"];
+var message = "";
+var points = 0;  
+var scoreDyn;     
+
+if(scoreDyn > 0){
+    points = scoreDyn;
+}
+console.log(scoreDyn);
+
+
+var choiceDyn;
+var updateDB;
+function playerPaper(){
+    choiceDyn = "Paper"
+    gameRun();
+    updateDB();
+   
+}
+
+function playerScissors(){
+
+    choiceDyn = "Scissors"
+    gameRun();
+    updateDB();
+
+}
+function playerRock(){
+
+    choiceDyn = "Rock"
+    gameRun();
+    updateDB();
+}
+
+
+var database = firebase.database().ref();
+
+
+
+
+
+
+
+
+
+
+function gameRun(){
+
+
+var playerChoice = choiceDyn;
+var compChoice=choiceArray[Math.floor(Math.random()*choiceArray.length)];
+if (playerChoice == compChoice){
+       
+        message = "Draw"
+        points += 0;
+}else if (playerChoice == "Rock" && compChoice == "Scissors") {
+    
+    message= "Player has Won"
+    points += 10;
+}else if (playerChoice == "Rock" && compChoice == "Paper"){
+    
+    message = "Player has lost"
+    points -=10;
+}else if (playerChoice == "Scissors" && compChoice == "Paper"){
+   
+    message = "Player has won"
+    points +=10;
+}else if (playerChoice == "Scissors" && compChoice == "Rock"){
+    
+    message = "Player has lost"
+    points -=10;
+}else if (playerChoice == "Paper" && compChoice == "Rock"){
+    
+    message = "Player has won"
+    points +=10;
+}else if (playerChoice == "Paper" && compChoice == "Scissors"){
+    
+    message = "Player has lost";
+    points -=10;
+}
+else{
+    console.log("Something went wrong. Blame Evan.")
+}
+console.log(points);
+}
+
+
+
+function updateDB(){
+    var scoreDyn = points;
+    console.log(name + " : " + message);
+
+    //Update database here
+    var value= {
+        SCOREVALUE : scoreDyn
+
+    }
+    database.push(value);
+
+}
+
+database.on("child_added", function(rowData){
+    var row = rowData.val();
+    var scoreDyn = row.SCOREVALUE;
+    console.log("NEW" + scoreDyn);
+    points = scoreDyn;
+
+    $(".scoreA").text(scoreDyn + "     " + message); 
+     
+
+});
+
+
+
+</script>
+</head>
+<body>
+    
+
+    <div> <h1 class="scoreA">  </h1> </div>
+    <button type="button" onclick="playerRock()">Rock</button><button type="button" onclick="playerScissors()">Scissors</button><button type="button" onclick="playerPaper()">Paper</button>
+
+</body>
+</html>

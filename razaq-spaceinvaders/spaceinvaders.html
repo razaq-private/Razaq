@@ -1,11 +1,38 @@
 <html>
     <head> 
+         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <!--Reference platform.js library here-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>     
+
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        
+        
          <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js"></script>
         <script src = "spaceinvaders.js"></script> 
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="231407507510-js8vg0ne6k4mpiskl0591l6gva308mvb.apps.googleusercontent.com">
+        
+        <style>
+            div{
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    color: white; 
+}
+
+
+        </style>
     </head>
 
     <body>
-        
+    <div class="signs">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
+    </div>
+    <div>    
+    <h3> Score: 0 </h3>
+    </div>  
     </body>
 
 

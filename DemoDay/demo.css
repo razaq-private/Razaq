@@ -1,0 +1,614 @@
+/*!
+ * Start Bootstrap - Grayscale v4.0.0-alpha (http://startbootstrap.com/template-overviews/grayscale)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+ */
+body {
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: black; }
+
+  /* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/* Popup container */
+.popup2 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup2 .popuptext2 {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup2 .popuptext2::after2 {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup2 .show2 {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+html {
+  width: 100%;
+  height: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 0 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 25px; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 35px; } }
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #42DCA3; }
+  a:focus, a:hover {
+    text-decoration: none;
+    color: #1d9b6c; }
+
+#mainNav {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: black; }
+  #mainNav .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    color: white;
+    border: 1px solid white; }
+  #mainNav .navbar-brand {
+    font-weight: 700; }
+  #mainNav a {
+    color: white; }
+  #mainNav .navbar-nav .nav-item {
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out; }
+    #mainNav .navbar-nav .nav-item:hover {
+      color: fade(white, 80%);
+      outline: none;
+      background-color: transparent; }
+    #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+      outline: none;
+      background-color: transparent; }
+  @media (min-width: 992px) {
+    #mainNav {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      letter-spacing: 1px;
+      border-bottom: none;
+      background: transparent; }
+      #mainNav.navbar-shrink {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        background: black; }
+      #mainNav .nav-link.active {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.3); }
+        #mainNav .nav-link.active:hover {
+          color: white; } }
+
+
+
+.masthead {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: red;
+  background: url("https://profalbrecht.files.wordpress.com/2012/01/lifeaftercollege1.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.8;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 250px; }
+    .masthead .intro-body .intro-text {
+      font-size: 50px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 500px; }
+      .masthead .intro-body .intro-text {
+        font-size: 500px; } }
+
+.masthead2 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: white;
+  background: url("https://www.architectsjournal.co.uk/pictures/1180xany/3/8/3/1376383_Wolfson-College_BGS-Architects_AFTER-04_auditoria.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 50px; }
+    .masthead .intro-body .intro-text {
+      font-size: 18px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 22px; } }
+
+.masthead3 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: purple;
+  background: url("http://i.dailymail.co.uk/i/pix/2016/10/07/article-P-8e2a0bac-74ca-4107-89c9-41543aba0c44-1iQN7cFXrya620fbaa452b08cc85-986_634x356.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.9;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px; }
+    .masthead .intro-body .intro-text {
+      font-size: 20px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 50px; } }
+
+.masthead4 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: black;
+  background: url("http://cdn.triathlete.com/wp-content/uploads/2016/07/themichigan.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.8;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px; }
+    .masthead .intro-body .intro-text {
+      font-size: 50px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 50px; } }
+
+
+.masthead5 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: purple;
+  background: url("http://collegexperience.net/wp-content/uploads/2016/11/fail-withdraw-from-glasses.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.8;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px; }
+    .masthead .intro-body .intro-text {
+      font-size: 50px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 50px; } }
+
+  .masthead6 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: purple;
+  background: url("https://static1.squarespace.com/static/568690b01115e06a4a17acb2/56a3764740667ae539005e3f/5762b6ced2b857a152c76235/1466087177716/Pool+Party+Background.png?format=1500w") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.8;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px; }
+    .masthead .intro-body .intro-text {
+      font-size: 50px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 50px; } }
+
+  .masthead7 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: black;
+  background: url("http://www.loveisrespect.org/wp-content/uploads/2013/08/ask-out.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.6;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px; }
+    .masthead .intro-body .intro-text {
+      font-size: 50px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 50px; } }
+
+  .masthead8 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: purple;
+  background: url("http://collegexperience.net/wp-content/uploads/2016/11/fail-withdraw-from-glasses.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.8;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px; }
+    .masthead .intro-body .intro-text {
+      font-size: 50px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 50px; } }
+
+.masthead9 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: purple;
+  background: url("http://collegexperience.net/wp-content/uploads/2016/11/fail-withdraw-from-glasses.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.8;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px; }
+    .masthead .intro-body .intro-text {
+      font-size: 50px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 50px; } }
+
+.masthead10 {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: purple;
+  background: url("http://collegexperience.net/wp-content/uploads/2016/11/fail-withdraw-from-glasses.jpg") no-repeat bottom center scroll;
+  background-color: black;
+   opacity: 0.8;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px; }
+    .masthead .intro-body .intro-text {
+      font-size: 50px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 100px; }
+      .masthead .intro-body .intro-text {
+        font-size: 50px; } }
+
+
+.btn-circle {
+  font-size: 26px;
+  width: 55px;
+  height: 55px;
+  margin-top: 15px;
+  line-height: 38px;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  color: white;
+  background: url("http://dhbc.ky.gov/bce/elevators/PublishingImages/inside%20elevator.jpg") no-repeat bottom center scroll;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  background: transparent; }
+  .btn-circle:focus, .btn-circle:hover {
+    color: white;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); }
+
+.content-section {
+  padding-top: 150px;
+  padding-bottom: 150px; }
+
+.download-section {
+  color: white;
+  background: url("../img/downloads-bg.jpg") no-repeat center center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#map {
+  width: 100%;
+  height: 300px; }
+
+@media (min-width: 992px) {
+  .content-section {
+    padding-top: 200px;
+    padding-bottom: 200px; }
+  #map {
+    height: 350px; } }
+
+.btn {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  border-radius: 0; }
+
+.btn-default {
+  color: #42DCA3;
+  border: 1px solid #42DCA3;
+  background-color: transparent; }
+  .btn-default:focus, .btn-default:hover {
+    color: black;
+    border: 1px solid #42DCA3;
+    outline: none;
+    background-color: #42DCA3; }
+
+ul.banner-social-buttons {
+  margin-top: 0; }
+  @media (max-width: 1199px) {
+    ul.banner-social-buttons {
+      margin-top: 15px; } }
+  @media (max-width: 767px) {
+    ul.banner-social-buttons li {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0; }
+      ul.banner-social-buttons li:last-child {
+        margin-bottom: 0; } }
+
+footer {
+  padding: 50px 0; }
+  footer p {
+    font-size: 14px;
+    margin: 0; }
+
+::-moz-selection {
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: none; }
+
+::selection {
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: none; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+body {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); }
